@@ -2,12 +2,10 @@
 
 /**
  *
- * Projectname ....... Multibyte Keyword Generator
- * Version ........... 1.7
- * Last modified ..... 2012-11-02
- * Author(s) ......... Peter Kahl
- *                     www.colossalmind.com
- * Copyright (c) ..... 2009 Peter Kahl, All Rights Reserved
+ * Multibyte Keyword Generator
+ * Copyright (c) 2009 Peter Kahl. All rights reserved.
+ * Use of this source code is governed by a GNU General Public License
+ * that can be found in the LICENSE file.
  *
  * https://github.com/peterkahl/multibyte-keyword-generator
  *
