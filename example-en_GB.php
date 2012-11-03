@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -79,7 +79,7 @@ $params['lang'] = 'en_GB'; // case insensitive
 // ignore languages
 $params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array; lower case; case sensitive !!!
 //----------------------------------------------------------------------
-OPTIONAL, but VERY IMPORTANT
+//OPTIONAL, but VERY IMPORTANT
 // if not defined, will default to values set in the class
 
 // 1-word keywords
@@ -96,14 +96,15 @@ $params['min_3words_length']        = 4;  // min length of words for 3 word phra
 $params['min_3words_phrase_length'] = 12; // min length of 3 word phrases
 $params['min_3words_phrase_occur']  = 2;  // min occur of 3 words phrase
 //----------------------------------------------------------------------
-REQUIRED
+//REQUIRED
 $keyword = new colossal_mind_mb_keyword_gen($params);
 
 // REQUIRED
 $autoKeywords = $keyword->get_keywords();
 
 echo $autoKeywords; // house,stimulus,created,saved,million,jobs,reports,state,money,obama,administration,republican,stimulus money,jobs saved
-
+
+
 //----------------------------------------------------------------------
 
 

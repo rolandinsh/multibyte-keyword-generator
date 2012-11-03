@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -10,8 +10,8 @@ $text = '<p></p>
 <div id="place_4" class="block mr ad">
 <span class="anzeige">Anzeige</span><div class="innerad"><div class="inner">
 <!--Bannerplatz "tribune" Nr.4   Tile:4-->
-<script type="text/javascript"> 
-				// <![CDATA[ 		
+<script type="text/javascript">
+				// <![CDATA[
 				document.write(\'<script src="http://ad.de.doubleclick.net/adj/zeitonline/gesellschaft/zeitgeschehen/article;tile=4;\' + n_pbt + \';sz=300x250;ord=\' + ord + \'?" type="text/javascript"><\/script>\');
 				// ]]>
 			</script><noscript><div><a href="http://ad.de.doubleclick.net/jump/zeitonline/gesellschaft/zeitgeschehen/article;tile=4;sz=300x250;ord=123456789?" rel="nofollow"><img src="http://ad.de.doubleclick.net/ad/zeitonline/gesellschaft/zeitgeschehen/article;tile=4;sz=300x250;ord=123456789?" width="300" height="250" style="border:none;" alt=""></a></div></noscript>
@@ -70,7 +70,7 @@ $params['lang'] = 'de_DE'; // case insensitive
 // ignore languages
 $params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array; lower case; case sensitive !!!
 //----------------------------------------------------------------------
-OPTIONAL, but VERY IMPORTANT
+//OPTIONAL, but VERY IMPORTANT
 // if not defined, will default to values set in the class
 
 // 1-word keywords
@@ -87,14 +87,15 @@ $params['min_3words_length']        = 4;  // min length of words for 3 word phra
 $params['min_3words_phrase_length'] = 12; // min length of 3 word phrases
 $params['min_3words_phrase_occur']  = 2;  // min occur of 3 words phrase
 //----------------------------------------------------------------------
-REQUIRED
+//REQUIRED
 $keyword = new colossal_mind_mb_keyword_gen($params);
 
 // REQUIRED
 $autoKeywords = $keyword->get_keywords();
 
 echo $autoKeywords; // taifun,tropensturm,philippinen,taifune,berichtet,mero,santos,bevölkerung,came,bringen,angaben,wasser,weil,menschen,seien,millionen,folgen,hilfe,bisher
-
+
+
 //----------------------------------------------------------------------
 
 

@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -40,6 +40,7 @@ The job figures released by the White House were based on detailed reports filed
  "What we have to do is rely on the fact that our public officials are honest," DeSeve said. He added that "there\'s no advantage to a state from overstating or understating."<br>
 <br>
 ';
+
 //----------------------------------------------------------------------
 // REQUIRED
 // specify valid location of the class
@@ -75,7 +76,7 @@ $params['lang'] = 'en_GB'; // case insensitive
 // ignore languages
 $params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array; lower case; case sensitive !!!
 //----------------------------------------------------------------------
-OPTIONAL, but VERY IMPORTANT
+//OPTIONAL, but VERY IMPORTANT
 // if not defined, will default to values set in the class
 
 // 1-word keywords
@@ -88,14 +89,15 @@ $params['min_2words_length']        = 0;  // min length of words for 2 word phra
 // 3-word keyphrases
 $params['min_3words_length']        = 0;  // min length of words for 3 word phrases; value 0 will DISABLE !!!
 //----------------------------------------------------------------------
-REQUIRED
+//REQUIRED
 $keyword = new colossal_mind_mb_keyword_gen($params);
 
 // REQUIRED
 $autoKeywords = $keyword->get_keywords();
 
 echo $autoKeywords;
-
+
+
 //----------------------------------------------------------------------
 
 

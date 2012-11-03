@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -46,6 +46,7 @@ Americans can\'t wait.
  What will American families do now?
 <br>
 ';
+
 //----------------------------------------------------------------------
 // REQUIRED
 // specify valid location of the class
@@ -79,9 +80,9 @@ $params['lang'] = 'en_GB'; // case insensitive
 // What it does: If the class encounters this language(s), it will
 // return empty string ''
 // ignore languages
-$params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array; lower case; case sensitive !!!
+$params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array case sensitive !!!
 //----------------------------------------------------------------------
-OPTIONAL, but VERY IMPORTANT
+//OPTIONAL, but VERY IMPORTANT
 // if not defined, will default to values set in the class
 
 // 1-word keywords
@@ -98,7 +99,7 @@ $params['min_3words_length']        = 4;  // min length of words for 3 word phra
 $params['min_3words_phrase_length'] = 12; // min length of 3 word phrases
 $params['min_3words_phrase_occur']  = 2;  // min occur of 3 words phrase
 //----------------------------------------------------------------------
-REQUIRED
+//REQUIRED
 $keyword = new colossal_mind_mb_keyword_gen($params);
 
 // REQUIRED
@@ -116,7 +117,7 @@ $article_kw = 'Obama, Washington, economy, jobs, USA , jobless,  politics , poli
 $global_kw = 'Politics,, washigton     ';
 
 
-//--------------------------------------------///////
+//----------------------------------------------------------------------
 
 
 // put them all together by concatenation

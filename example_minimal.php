@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -40,6 +40,7 @@ The job figures released by the White House were based on detailed reports filed
  "What we have to do is rely on the fact that our public officials are honest," DeSeve said. He added that "there\'s no advantage to a state from overstating or understating."<br>
 <br>
 ';
+
 //----------------------------------------------------------------------
 // REQUIRED
 // specify valid location of the class
@@ -52,10 +53,8 @@ include (dirname(__FILE__) .'/class.colossal-mind-mb-keyword-generator.php');
 $params['content'] = $text;
 
 
-
 // this one is used so that this example is properly displayed in browser
 header('Content-type: text/html; charset=utf-8');
-
 
 
 // REQUIRED
@@ -65,7 +64,8 @@ $keyword = new colossal_mind_mb_keyword_gen($params);
 $autoKeywords = $keyword->get_keywords();
 
 echo $autoKeywords;
-
+
+
 //----------------------------------------------------------------------
 
 
