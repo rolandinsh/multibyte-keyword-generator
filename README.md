@@ -1,12 +1,13 @@
 Multibyte Keyword Generator
+===========================
 
-https://github.com/peterkahl/multibyte-keyword-generator
+[https://github.com/peterkahl/multibyte-keyword-generator](https://github.com/peterkahl/multibyte-keyword-generator)
 
-
+About
+=====
 
 This PHP class is based in large part on the "Automatic Keyword
-Generator" class by Ver Pangonilo
-<http://www.phpclasses.org/browse/package/3245.html> with
+Generator" class by [Ver Pangonilo](http://www.phpclasses.org/browse/package/3245.html) with
 additional improvements, among them being better word segmentation and
 ability to handle multibyte strings.
 
