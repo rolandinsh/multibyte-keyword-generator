@@ -1,5 +1,16 @@
 <?php
 
+/**
+ *
+ * Multibyte Keyword Generator
+ * Copyright (c) 2009-2012, Peter Kahl. All rights reserved. www.colossalmind.com
+ * Use of this source code is governed by a GNU General Public License
+ * that can be found in the LICENSE file.
+ *
+ * https://github.com/peterkahl/multibyte-keyword-generator
+ *
+ */
+
 // for debugging
 ini_set('display_errors',1);
 
@@ -135,4 +146,4 @@ echo $keywords; // washigton,house,stimulus,created,saved,million,jobs,american,
 //----------------------------------------------------------------------
 
 
-?>
+

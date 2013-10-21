@@ -3,7 +3,7 @@
 /**
  *
  * Multibyte Keyword Generator
- * Copyright (c) 2009 Peter Kahl. All rights reserved.
+ * Copyright (c) 2009-2012, Peter Kahl. All rights reserved. www.colossalmind.com
  * Use of this source code is governed by a GNU General Public License
  * that can be found in the LICENSE file.
  *
@@ -436,4 +436,4 @@ class colossal_mind_mb_keyword_gen {
 }
 //----------------------------------------------------------------------
 
-?>
+
