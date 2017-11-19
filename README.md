@@ -1,6 +1,6 @@
 # Keyword Generator (Multibyte)
 
-Inspired a package by [Ver Pangonilo](http://www.phpclasses.org/browse/package/3245.html) with additional improvements, among them being better word segmentation and ability to handle multibyte strings.
+Inspired by a package by [Ver Pangonilo](http://www.phpclasses.org/browse/package/3245.html) with additional improvements, among them being better word segmentation and ability to handle multibyte strings.
 
 This library generates keywords based on the contents of a text string. This eliminates the tedious
 process of thinking what the best keywords are. The main principle of

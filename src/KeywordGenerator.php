@@ -5,7 +5,7 @@
  * Inspired by a package by Ver Pangonilo
  *      <http://www.phpclasses.org/browse/package/3245.html>
  *
- * @version    2.0 (2017-04-30 06:39:00 GMT)
+ * @version    3.0 (2017-11-19 00:51:24 GMT)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @copyright  2009-2017 Peter Kahl
  * @license    Apache License, Version 2.0
@@ -115,7 +115,6 @@ class KeywordGenerator {
 
     $str = mb_strtolower($str, $this->encoding);
     $str = $this->StripHtml($str);
-    $str = $this->SingleLineBreak($str);
     $str = $this->StripNumerals($str);
     $str = $this->StripHyphens($str);
     $str = $this->StripPossessions($str);
@@ -403,18 +402,39 @@ class KeywordGenerator {
   #===================================================================
 
   private function StripHtml($str) {
+
     if (empty($str)) {
       return '';
     }
-    $str = preg_replace("/<script.*?>[\s\S]*<\/script>/i", "", $str); # removes JavaScript
-    $str = preg_replace("/(<\/p>\s*<p>|<\/div>\s*<div>|<\/li>\s*<li>|<\/td>\s*<td>|<br>|<br\ ?\/>)/i", "\n", $str); # we use \n to segment words
-    $str =                        # replace multiples with single line breaks
+
+    $str = html_entity_decode($str);
+
+    # EOL
+    $str = $this->SingleLineBreak($str);
+    $str = preg_replace("#<br\ ?/?>(\n)?#i", "\n", $str);
+
+    # Strip HTML
+    $str = preg_replace('#<head[^>]*?>.*?</head>#siu',        '', $str);
+    $str = preg_replace("/(<\/p>\s*<p>|<\/div>\s*<div>|<\/li>\s*<li>|<\/td>\s*<td>|<br>|<br\ ?\/>)/siu", "\n", $str); # we use \n to segment words
+    $str = preg_replace('#<style[^>]*?>.*?</style>#siu',      '', $str);
+    $str = preg_replace('#<script[^>]*?.*?</script>#siu',     '', $str);
+    $str = preg_replace('#<object[^>]*?.*?</object>#siu',     '', $str);
+    $str = preg_replace('#<embed[^>]*?.*?</embed>#siu',       '', $str);
+    $str = preg_replace('#<applet[^>]*?.*?</applet>#siu',     '', $str);
+    $str = preg_replace('#<noframes[^>]*?.*?</noframes>#siu', '', $str);
+    $str = preg_replace('#<noscript[^>]*?.*?</noscript>#siu', '', $str);
+    $str = preg_replace('#<noembed[^>]*?.*?</noembed>#siu',   '', $str);
+    $str = preg_replace('#<figcaption>.+</figcaption>#siu',   '', $str);
+
     $str = strip_tags($str);
+
     $unwanted = array('"', '“', '„', '<', '>', '/', '*', '[', ']', '+', '=', '#');
     $str = str_replace($unwanted, ' ', $str);
-    $str = preg_replace('/&nbsp;/i', ' ', $str);                      # remove &nbsp;
-    $str = preg_replace('/&[a-z]{2,5};/i', '', $str);                 # remove &trade;  &copy;
-    $str = preg_replace('/\s\s+/', ' ', $str);                        # replace multiple white spaces
+
+    # Trim whitespace
+    $str = str_replace("\t", '', $str);
+    $str = preg_replace('/\ +/', ' ', $str);
+
     return trim($str);
   }
 
