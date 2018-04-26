@@ -1,4 +1,6 @@
-# Keyword Generator (Multibyte)
+# Multibyte Keyword Generator
+
+[![If this project has business value for you then don't hesitate to support me with a small donation.](https://img.shields.io/badge/Donations-via%20Paypal-blue.svg)](https://www.paypal.me/PeterK93)
 
 Inspired by a package by [Ver Pangonilo](http://www.phpclasses.org/browse/package/3245.html) with additional improvements, among them being better word segmentation and ability to handle multibyte strings.
 
