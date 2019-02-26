@@ -1,5 +1,5 @@
 {
-    "name": "peterkahl/multibyte-keyword-generator",
+    "name": "rolandinsh/multibyte-keyword-generator",
     "type": "library",
     "description": "Generates keywords based on the contents of a text string.",
     "keywords": ["keywords", "keyphrases", "multibyte-strings", "multilingual"],
@@ -11,6 +11,12 @@
             "email": "peter.kahl@colossalmind.com",
             "homepage": "https://www.colossalmind.com/",
             "role": "Developer"
+        },
+        {
+            "name": "Rolands Umbrovskis",
+            "email": "info@mediabox.lv",
+            "homepage": "https://umbrovskis.com/",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -18,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "peterkahl\\KeywordGenerator\\": "src/"
+            "rolandinsh\\KeywordGenerator\\": "src/"
         }
     }
 }
