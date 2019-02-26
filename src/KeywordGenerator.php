@@ -23,7 +23,7 @@
  * limitations under the License.
  */
 
-namespace peterkahl\KeywordGenerator;
+namespace rolandinsh\KeywordGenerator;
 
 use \SplFileObject;
 use \Exception;
